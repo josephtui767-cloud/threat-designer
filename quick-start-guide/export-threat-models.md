@@ -75,8 +75,8 @@ Generates a multi-sheet workbook:
 | Sheet | Contents |
 |-------|----------|
 | **Summary** | Title, description, creation date, reasoning level |
-| **Threats** | Full threat catalog with ID, name, STRIDE category, description, risk score, likelihood, impact, mitigations, ISO controls, affected assets, status, comments |
-| **Assets** | Name, type, description, sensitivity |
+| **Threats** | Full threat catalog with ID, name, STRIDE category, description, target, likelihood, impact, source, attack vector, prerequisites, mitigations, notes |
+| **Assets** | Name, type, description, criticality |
 | **Data Flows** | Source, target, description |
 | **Trust Boundaries** | Source, target, purpose |
 | **Assumptions** | Listed assumptions |
@@ -90,10 +90,10 @@ Generates a structured text document:
 - Assumptions as numbered list
 - Assets, data flows, trust boundaries as Markdown tables
 - Threat sources with details
-- Complete threat catalog **sorted by risk score** (High to Low) with:
-  - Attribute tables per threat (STRIDE category, risk score, likelihood, impact, etc.)
-  - Description, affected assets, prerequisites, mitigations, ISO controls
-  - Comments (if any)
+- Complete threat catalog **sorted by likelihood** (High to Low) with:
+  - Attribute tables per threat (STRIDE category, likelihood, impact, target, source, attack vector)
+  - Description, prerequisites, mitigations
+  - Notes (if any)
 
 **Best for:** AI/LLM analysis, Git-friendly documentation, developer wikis.
 
